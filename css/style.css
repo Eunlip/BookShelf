@@ -1,0 +1,267 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	color: #f6f6ee;
+	background: url(../img/background.jpg) center no-repeat;
+	background-color: #526b79;
+	background-blend-mode: multiply;
+}
+
+input,
+button {
+	font-size: 16px;
+}
+
+header {
+	padding: 1.5rem;
+	color: #f6f6ee;
+	text-align: center;
+	font-size: 1.5rem;
+	box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.15);
+}
+
+main {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 16px;
+}
+
+.input_section {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	padding: 16px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+}
+
+.input_section_title {
+	text-align: center;
+	color: #f6f6ee;
+	font-size: 2rem;
+}
+
+.input_section .input,
+.edit_wrapper .input {
+	margin: 12px 0;
+}
+
+.input_section .input input {
+	margin-top: 5px;
+	width: 100%;
+	display: block;
+	padding: 8px;
+	border-radius: 8px;
+	outline: 0;
+	border: 0;
+}
+
+.input_section .input label {
+	color: #f6f6ee;
+	font-weight: 700;
+}
+
+.input_section .input_checkbox {
+	margin: 15px 0;
+	display: flex;
+	align-items: center;
+}
+
+.input_section .input_checkbox label {
+	color: #f6f6ee;
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+.input_section input[type='checkbox'] {
+	accent-color: #c86d73;
+}
+
+.input_btn #book_submit {
+	background-color: #c86d73;
+	color: #f6f6ee;
+	border: 0;
+	border-radius: 8px;
+	display: block;
+	padding: 8px;
+	cursor: pointer;
+	width: 100%;
+	font-weight: 700;
+	margin-top: 15px;
+}
+
+.input_btn #book_submit:hover {
+	opacity: 0.9;
+}
+
+.search_section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 16px 0;
+	padding: 16px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search_section h2 {
+	color: #f6f6ee;
+	font-size: 2rem;
+}
+
+.search_section form {
+	padding: 16px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: auto 0.5fr;
+	gap: 10px;
+}
+
+.search_section input {
+	padding: 8px;
+	border-radius: 8px;
+}
+
+.search_section button {
+	background-color: #c86d73;
+	color: #f6f6ee;
+	border: 0;
+	border-radius: 8px;
+	cursor: pointer;
+}
+.search_section button:hover {
+	opacity: 0.9;
+}
+
+.book_shelf {
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+	padding: 16px;
+	margin-top: 16px;
+	border-radius: 10px;
+}
+
+.book_shelf h2 {
+	color: #f6f6ee;
+}
+
+.book_shelf .book_list {
+	padding: 16px;
+}
+
+.book_shelf .book_list .book_item {
+	padding: 8px 16px 16px 16px;
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+	border-radius: 5px;
+	margin: 10px 0;
+}
+
+.book_shelf .book_list .book_item h3,
+p {
+	margin: 8px 0;
+}
+
+.book_shelf .book_list .book_item .action button {
+	border: 0;
+	padding: 5px;
+	margin: 0 5px 0 0;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.book_shelf .book_list .book_item .action .green {
+	background-color: darkgreen;
+	color: #fff;
+}
+
+.book_shelf .book_list .book_item .action .red {
+	background-color: darkred;
+	color: #fff;
+}
+
+.book_shelf .book_list .book_item .action .yellow {
+	background-color: #ffbd03;
+	color: #fff;
+}
+
+.edit_book_form {
+	position: fixed;
+	display: none;
+	width: 100%;
+	margin: 0 auto;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 2;
+}
+
+.edit_wrapper {
+	background-color: #fff;
+	max-width: 600px;
+	margin: 15% auto;
+	display: flex;
+	flex-direction: column;
+	padding: 16px;
+	border-radius: 10px;
+	position: relative;
+}
+
+.edit_wrapper .input label {
+	color: #000;
+	font-weight: 700;
+}
+
+.edit_wrapper .input input {
+	width: 100%;
+	display: block;
+	padding: 8px;
+	border-radius: 8px;
+	outline: 0;
+	border: 1px solid #000;
+}
+
+.edit_wrapper h2 {
+	color: #000;
+	text-align: center;
+}
+
+.edit_wrapper #edit_submit {
+	background-color: #c86d73;
+	color: #f6f6ee;
+	border: 0;
+	border-radius: 8px;
+	display: block;
+	padding: 8px;
+	cursor: pointer;
+	width: 100%;
+	font-weight: 700;
+	margin-top: 15px;
+}
+
+.edit_wrapper #edit_submit:hover {
+	opacity: 0.9;
+}
+
+.close {
+	color: #aaa;
+	position: absolute;
+	top: 0;
+	right: 15px;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}

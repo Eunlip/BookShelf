@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bookshelf Apps</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+			rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<h1>Bookshelf Apps</h1>
+		</header>
+
+		<main>
+			<section class="input_section">
+				<h2 class="input_section_title">Insert New Book</h2>
+				<form id="input_book">
+					<div class="input">
+						<label for="input_book_title">Title</label>
+						<input type="text" id="input_book_title" placeholder="" />
+					</div>
+					<div class="input">
+						<label for="input_book_author">Author</label>
+						<input type="text" id="input_book_author" placeholder="" />
+					</div>
+					<div class="input">
+						<label for="input_book_year">Year</label>
+						<input type="number" id="input_book_year" placeholder="" />
+					</div>
+					<div class="input_checkbox">
+						<label for="input_book_iscomplete">Finished Reading</label>
+						<input type="checkbox" id="input_book_iscomplete" />
+					</div>
+					<div class="input_btn">
+						<button type="submit" id="book_submit">Put it on the bookshelf</button>
+					</div>
+				</form>
+			</section>
+
+			<section class="search_section">
+				<h2>Looking for Books</h2>
+				<form id="search_book">
+					<input type="text" id="search_book_input" />
+					<button type="submit" id="search_submit">Search</button>
+				</form>
+			</section>
+
+			<section class="book_shelf">
+				<h2>Unfinished Reading</h2>
+				<div id="unfinish_bookshelf_list" class="book_list"></div>
+			</section>
+
+			<div class="book_shelf">
+				<h2>Finished Reading</h2>
+				<div id="finish_bookshelf_list" class="book_list"></div>
+			</div>
+
+			<div class="edit_book_form" id="edit_modal">
+				<div class="edit_wrapper">
+					<form id="edit_form">
+						<h2>Edit Books</h2>
+						<span class="close">&times;</span>
+						<div class="input">
+							<label for="edit_book_title">Title</label>
+							<input type="text" id="edit_book_title" placeholder="" />
+						</div>
+						<div class="input">
+							<label for="edit_book_author">Author</label>
+							<input type="text" id="edit_book_author" placeholder="" />
+						</div>
+						<div class="input">
+							<label for="edit_book_year">Year</label>
+							<input type="number" id="edit_book_year" placeholder="" />
+						</div>
+						<div class="input_btn">
+							<button type="submit" id="edit_submit">Saved Changes</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
+
+		<script src="/js/script.js"></script>
+	</body>
+</html>
