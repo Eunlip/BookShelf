@@ -4,87 +4,81 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Bookshelf Apps</title>
-		<link rel="stylesheet" href="css/style.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="stylesheet" href="style.css" />
+		<!-- Bootstrap Icon -->
 		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
-			rel="stylesheet" />
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+		/>
+		<!-- ToastiyJS -->
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+		/>
 	</head>
 	<body>
-		<header>
-			<h1>Bookshelf Apps</h1>
-		</header>
+		<div class="container">
+			<header>
+				<h1>Bookshelf Apps</h1>
+			</header>
 
-		<main>
-			<section class="input_section">
-				<h2 class="input_section_title">Insert New Book</h2>
-				<form id="input_book">
-					<div class="input">
-						<label for="input_book_title">Title</label>
-						<input type="text" id="input_book_title" placeholder="" />
-					</div>
-					<div class="input">
-						<label for="input_book_author">Author</label>
-						<input type="text" id="input_book_author" placeholder="" />
-					</div>
-					<div class="input">
-						<label for="input_book_year">Year</label>
-						<input type="number" id="input_book_year" placeholder="" />
-					</div>
-					<div class="input_checkbox">
-						<label for="input_book_iscomplete">Finished Reading</label>
-						<input type="checkbox" id="input_book_iscomplete" />
-					</div>
-					<div class="input_btn">
-						<button type="submit" id="book_submit">Put it on the bookshelf</button>
-					</div>
-				</form>
-			</section>
+			<main>
+				<section class="left">
+					<section class="input-field">
+						<h2>Masukkan Buku</h2>
+						<form id="input-book" action="">
+							<div class="title">
+								<label for="judul">Judul</label>
+								<input type="text" id="judul" placeholder="Harry Potter II" required />
+							</div>
+							<div class="author">
+								<label for="penulis">Penulis</label>
+								<input type="text" id="penulis" placeholder="J.K Rowling" required />
+							</div>
+							<div class="year">
+								<label for="tahun">Tahun</label>
+								<input type="number" id="tahun" placeholder="2000" maxlength="4" required />
+							</div>
+							<div class="checkbox">
+								<label for="selesai-dibaca">Selesai dibaca</label>
+								<input type="checkbox" id="selesai-dibaca" /> <br />
+							</div>
+							<button class="add-book">Tambahkan Buku</button>
+						</form>
+					</section>
+				</section>
 
-			<section class="search_section">
-				<h2>Looking for Books</h2>
-				<form id="search_book">
-					<input type="text" id="search_book_input" />
-					<button type="submit" id="search_submit">Search</button>
-				</form>
-			</section>
+				<section class="right">
+					<section class="search-field">
+						<h2>Cari Buku Berdasarkan Judul</h2>
+						<form id="search-book">
+							<input type="text" id="search-input" />
+							<button style="outline: none; border: none"><i class="bi bi-search"></i></button>
+						</form>
+					</section>
 
-			<section class="book_shelf">
-				<h2>Unfinished Reading</h2>
-				<div id="unfinish_bookshelf_list" class="book_list"></div>
-			</section>
+					<section class="book-shelf">
+						<h2>Belum Selesai Dibaca</h2>
+						<div id="uncompleted-bookshelf-list"></div>
+						<p id="empty-uncompleted-message">BUKU KOSONG</p>
+					</section>
 
-			<div class="book_shelf">
-				<h2>Finished Reading</h2>
-				<div id="finish_bookshelf_list" class="book_list"></div>
-			</div>
+					<section class="book-shelf">
+						<h2>Selesai Dibaca</h2>
+						<div id="completed-bookshelf-list"></div>
+						<p id="empty-completed-message">BUKU KOSONG</p>
+					</section>
+				</section>
+			</main>
 
-			<div class="edit_book_form" id="edit_modal">
-				<div class="edit_wrapper">
-					<form id="edit_form">
-						<h2>Edit Books</h2>
-						<span class="close">&times;</span>
-						<div class="input">
-							<label for="edit_book_title">Title</label>
-							<input type="text" id="edit_book_title" placeholder="" />
-						</div>
-						<div class="input">
-							<label for="edit_book_author">Author</label>
-							<input type="text" id="edit_book_author" placeholder="" />
-						</div>
-						<div class="input">
-							<label for="edit_book_year">Year</label>
-							<input type="number" id="edit_book_year" placeholder="" />
-						</div>
-						<div class="input_btn">
-							<button type="submit" id="edit_submit">Saved Changes</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</main>
-
-		<script src="js/script.js"></script>
+			<footer>
+				<p>Created by <span>Muhamad Alif Pahreza</span></p>
+			</footer>
+		</div>
+		<script src="bookshelf.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+		<!-- Sweetalert JS -->
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	</body>
 </html>
